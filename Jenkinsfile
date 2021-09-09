@@ -1,12 +1,14 @@
-stage('Test') {
-        node('linux') {
-            checkout scm
-            try {
-                // unstash 'app'
-                sh 'ls -lh'
-            }
-            finally {
-                junit 'test.xml'
+node {
+        stage('Test') {
+            steps {
+                checkout scm
+                // try {
+                    // unstash 'app'
+                    sh 'ls -lh'
+                // }
+                // finally {
+                    junit 'test.xml'
+                // }
             }
         }
     }
