@@ -1,6 +1,5 @@
 node {
         stage('Test') {
-            steps {
                 checkout scm
                 // try {
                     // unstash 'app'
@@ -9,6 +8,5 @@ node {
                 // finally {
                     junit 'test.xml'
                 // }
-            }
         }
     }
